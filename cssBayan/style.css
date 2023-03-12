@@ -80,7 +80,7 @@ label::after {
     height: 24px;
     right: 13px;
     top: 10px;
-    transition: all 0.5s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 .card {
