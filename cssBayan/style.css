@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+body {
+    height: 101vh;
+}
+
+.container {
+    margin: 5% auto;
+    width: 70vw;
+    background-color: white;
+}
+
+.title {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    color: black;
+}
+
+@media (max-width: 1920px) {
+    html {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 820px) {
+    html {
+        font-size: 1.5em;
+    }
+
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 0.7em;
+    }
+
+}
+
+.container {
+    color: blue;
+    z-index: 1;
+}
+
+input {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    padding: 1% 0;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.container:hover {
+    cursor: pointer;
+    color: black;
+}
+
+.container:hover .title {
+    cursor: default;
+}
+
+label::after {
+    content: '\f067';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 10px;
+    transition: all 0.5s ease-out;
+}
+
+.card {
+    z-index: 30;
+    border-bottom: 1px solid gray;
+}
+
+input:checked+label::after,
+label:hover::after {
+    content: '\f00d';
+}
+
+label:active {
+    color: blue;
+}
+
+.container input:checked+label {
+    color: black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 30vw;
+    height: 0;
+    border-radius: 25px;
+    transition: all 0.5s ease-out;
+
+}
+
+.container input:checked~label img,
+.container label:hover img {
+    height: 30vw;
+}
