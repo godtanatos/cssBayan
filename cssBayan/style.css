@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@media (min-width: 320px) {
+body{
+    background: red;
+}
+}
+
+@media (min-width: 820px) {
+    body{
+        background: yellow;
+    }
+}
+
+@media (min-width: 1920px) {
+    body{
+        background: green;
+    }
+}
